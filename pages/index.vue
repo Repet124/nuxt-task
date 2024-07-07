@@ -1,4 +1,4 @@
 <template>
-	<h1>Articles</h1>
+	<h1 class="h1">Articles</h1>
 	<ArticlesList/>
 </template>

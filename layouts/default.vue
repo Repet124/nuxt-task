@@ -1,7 +1,7 @@
 <template>
 	<HeaderBlock />
 
-	<main>
+	<main class="container">
 		<slot />
 	</main>
 
@@ -13,6 +13,10 @@
 </script>
 
 <style>
+	@font-face {
+		font-family: 'tt_commons';
+		src: url('/fonts/tt_commons_regular.woff') format('woff');
+	}
 	:root {
 		--black: #101010;
 		--dark-gray: #232323;
@@ -24,5 +28,34 @@
 		--purple: #7941A7;
 		--light-purple: #E2BEFF;
 		--blue: #1059C8;
+		color-scheme: light;
+	}
+
+	.btn {
+		display: inline-block;
+		padding: 16px 32px;
+		height: 52px;
+		border-radius: 26px;
+		background-color: var(--black);
+		text-align: center;
+		line-height: 20px;
+		font-size: 20px;
+		color: #fff;
+	}
+
+	* {
+		margin: 0;
+		padding: 0;
+		font-family: tt_commons, sans-serif;
+	}
+
+	.container {
+		margin: 0 auto;
+		max-width: 1217px;
+	}
+
+	.h1 {
+		font-size: 84px;
+		font-weight: 400;
 	}
 </style>
