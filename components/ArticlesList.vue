@@ -19,7 +19,7 @@
 		rows?: number
 	}
 
-	const rowHeight: number = 398;
+	const rowHeight: number = 378;
 	const { cols, rows } = withDefaults(defineProps<Props>(), {
 		cols: 4,
 		rows: 2,
