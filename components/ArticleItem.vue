@@ -2,7 +2,7 @@
 	<article :class="$style.article">
 		<img
 			:class="$style.image"
-			src="/images/dev.jpg"
+			:src="article.image"
 			:alt="`Illustration of ${article.title}`"
 		>
 		<p :class="$style.text">{{ preview }}</p>

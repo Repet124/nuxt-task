@@ -1,6 +1,6 @@
 <template>
 	<header :class="$style.header">
-		<NuxtLink to="#">
+		<NuxtLink to="/">
 			<img src="/images/logo.svg" alt="QTIM logo">
 		</NuxtLink>
 		<nav :class="$style.nav">

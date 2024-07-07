@@ -33,7 +33,11 @@
 	const { data } = await useFetch('/api/articles');
 
 	function articles() {
-		let result = data.value.slice(
+		// поворот массива, т.к. в предоставленном апи идёт битые картинки
+		// просто чтобы первая страница была визуально приятнее
+		let result = data.value.slice().reverse().slice(
+		// нормальный вариант
+		// let result = data.value.slice(
 			articlesPerPage * (page.value-1),
 			articlesPerPage * page.value
 		);
