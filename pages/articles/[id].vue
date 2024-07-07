@@ -1,5 +1,5 @@
 <template>
-	<template #heading>{{ title }}</template>
+	<h1>{{ title }}</h1>
 	<img :src="image" :alt="`Illustration of ${title}`">
 	<h2>About</h2>
 	<p>{{ description }}</p>

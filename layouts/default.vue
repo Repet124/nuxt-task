@@ -2,9 +2,6 @@
 	<HeaderBlock />
 
 	<main>
-		<h1>
-			<slot name="h1" />
-		</h1>
 		<slot />
 	</main>
 

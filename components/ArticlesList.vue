@@ -1,13 +1,13 @@
 <template>
 	<div :style="{
-		gridTemplateCols: cols
+		gridTemplateCols: cols,
 		gridTemplateRows: `repeat(${rowHeight}px, ${rows})`
 	}">
 		<ArticleItem v-for="article in articles" :article="article" />
 	</div>
-	<nav>
-		<!-- pagination -->
-	</nav>
+	<!-- <nav>
+		<UPagination v-model="usePage" :page-count="pageCount" :total="articles.length" />
+	</nav> -->
 </template>
 
 <script setup lang="ts">
@@ -21,8 +21,10 @@
 		cols: 4,
 		rows: 2,
 	})
+	// const usePage = () => useState('page');
 
-	const { articles } = await useFetch('/articles');
+	const { data: articles } = await useFetch('/api/articles');
+	// const pageCount = Math.ceil(articles.length / cols / rows);
 </script>
 
 <style scoped>
