@@ -1,13 +1,13 @@
 <template>
-	<h1>{{ title }}</h1>
-	<img :src="image" :alt="`Illustration of ${title}`">
+	<h1>{{ data.title }}</h1>
+	<img :src="data.image" :alt="`Illustration of ${data.title}`">
 	<h2>About</h2>
-	<p>{{ description }}</p>
+	<p>{{ data.description }}</p>
 </template>
 
 <script setup>
 	const { id } = useRoute().params;
-	const { title, image, descriprion } = await useFetch('/articles/'+id, {key: id});
+	const { data } = await useFetch('/api/articles/'+id, {key: id});
 </script>
 
 <style scoped>
