@@ -8,10 +8,6 @@
 	<FooterBlock />
 </template>
 
-<script setup>
-	
-</script>
-
 <style>
 	@font-face {
 		font-family: 'tt_commons';
