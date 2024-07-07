@@ -1,7 +1,7 @@
 <template>
-	<article>
+	<article :class="$style.article">
 		<img
-			class="image"
+			:class="$style.image"
 			:src="article.image"
 			:srcset="article.image"
 			:alt="`Illustration of ${article.title}`"
@@ -15,7 +15,10 @@
 	const { article } = defineProps(['article']);
 </script>
 
-<style scoped>
+<style scoped module>
+	.article {
+		overflow: hidden;
+	}
 	.image {
 		width: 100%;
 	}

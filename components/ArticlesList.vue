@@ -6,10 +6,10 @@
 			gridTemplateRows: `repeat(${rows}, ${rowHeight}px)`
 		}"
 	>
-		<ArticleItem v-for="article in articles.reverse()" :article="article" />
+		<ArticleItem v-for="article in articles()" :article="article" />
 	</div>
 	<nav>
-		<UPagination v-model="usePage" :page-count="pageCount" :total="articles.length" />
+		<UPagination v-model="page" :page-count="articlesPerPage" :total="data.length"/>
 	</nav>
 </template>
 
@@ -24,10 +24,17 @@
 		cols: 4,
 		rows: 2,
 	})
-	const usePage = () => useState('page');
+	const articlesPerPage = cols * rows;
+	const page = useState('page', () => 1);
+	const { data } = await useFetch('/api/articles');
 
-	const { data: articles } = await useFetch('/api/articles');
-	const pageCount = Math.ceil(articles.length / cols / rows);
+	function articles() {
+		let result = data.value.slice(
+			articlesPerPage * (page.value-1),
+			articlesPerPage * page.value
+		);
+		return result;
+	};
 </script>
 
 <style scoped module>
