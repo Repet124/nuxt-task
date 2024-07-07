@@ -15,12 +15,12 @@
 			<address :class="$style.addr">
 				<span>Office in Russia</span>
 				<span>139 Ruben Station Lake Drew, NM 52678</span>
-				<!-- <IconBtn></IconBtn> -->
+				<button class="btn btn-circle" :class="$style.tg"></button>
 			</address>
 			<address :class="$style.addr">
 				<span>Office in Dubai</span>
 				<span>139 Ruben Station Lake Drew, NM 52678</span>
-				<!-- <IconBtn></IconBtn> -->
+				<button class="btn btn-circle" :class="$style.tg"></button>
 			</address>
 		</div>
 		<nav :class="$style.nav">
@@ -140,6 +140,10 @@
 			background-color: var(--black);
 			transform: scale(9.5);
 		}
-/* 		box-shadow: 0 0 0 160px var(--black); */
+	}
+	.tg {
+		background: no-repeat center center var(--black);
+		background-size: 40%;
+		background-image: url(/images/tg.svg);
 	}
 </style>

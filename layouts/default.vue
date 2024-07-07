@@ -37,6 +37,18 @@
 		line-height: 20px;
 		font-size: 20px;
 		color: #fff;
+		transition: .3s;
+		&:hover {
+			background-color: var(--dark-gray);
+		}
+	}
+
+	.btn-circle {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		width: 52px;
+		padding: 0;
 	}
 
 	* {

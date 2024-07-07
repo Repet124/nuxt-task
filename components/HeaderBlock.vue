@@ -7,7 +7,7 @@
 			<NuxtLink to="#" :class="$style.link">Works</NuxtLink>
 			<NuxtLink to="#" :class="$style.link">About</NuxtLink>
 			<div :class="$style.buttons">
-				<!-- <IconBtn></IconBtn> -->
+				<button class="btn btn-circle" :class="$style.lang"></button>
 				<NuxtLink to="#" class="btn">Let's work</NuxtLink>
 			</div>
 		</nav>
@@ -33,5 +33,15 @@
 		display: flex;
 		justify-content: space-between;
 		align-items: center;
+		gap: 16px;
+	}
+	.lang {
+		background: no-repeat center center;
+		background-image: url(/images/uk.svg);
+		background-color: var(--white);
+		border: 3px solid var(--light-gray);
+		&:hover{
+			background-color: var(--light-gray);
+		}
 	}
 </style>
