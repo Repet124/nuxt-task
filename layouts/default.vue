@@ -1,7 +1,7 @@
 <template>
 	<HeaderBlock />
 
-	<main class="container">
+	<main class="container main">
 		<slot />
 	</main>
 
@@ -22,7 +22,7 @@
 		--dark-gray: #232323;
 		--gray: #868686;
 		--light-gray: #F3F3F3;
-		--white: #F3F3F3;
+		--white: #fff;
 
 		--green: #9EFFBF;
 		--purple: #7941A7;
@@ -49,6 +49,10 @@
 		font-family: tt_commons, sans-serif;
 	}
 
+	.main {
+		padding: 140px 0;
+	}
+
 	.container {
 		margin: 0 auto;
 		max-width: 1217px;
@@ -57,5 +61,6 @@
 	.h1 {
 		font-size: 84px;
 		font-weight: 400;
+		margin-bottom: 60px;
 	}
 </style>
